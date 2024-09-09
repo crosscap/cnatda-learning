@@ -2,6 +2,7 @@
 
 # import socket module
 from socket import *
+import time
 import sys  # In order to terminate the program
 
 
@@ -22,7 +23,10 @@ while True:
         outputdata = f.read()
 
         # Send one HTTP header line into socket
-        head = "HTTP/1.1 200 OK\r\n\r\n"
+        status_line = "HTTP/1.1 200 OK\r\n"
+        date = time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime())
+        headers = f"Date: {date}\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
+        head = status_line + headers
         connectionSocket.send(head.encode())
 
         # Send the content of the requested file to the client
@@ -33,7 +37,10 @@ while True:
         connectionSocket.close()
     except IOError:
         # Send response message for file not found
-        head = "HTTP/1.1 404 Not Found\r\n\r\n"
+        status_line = "HTTP/1.1 404 Not Found\r\n\r\n"
+        date = time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime())
+        headers = f"Date: {date}\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
+        head = status_line + headers
         connectionSocket.send(head.encode())
         body = "404 Not Found\r\n"
         connectionSocket.send(body.encode())
