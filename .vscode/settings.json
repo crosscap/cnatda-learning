@@ -1,5 +1,6 @@
 {
   "editor.cursorBlinking": "blink",
   "editor.cursorSmoothCaretAnimation": "off",
-  "editor.cursorStyle": "line"
+  "editor.cursorStyle": "line",
+  "python.analysis.typeCheckingMode": "off"
 }
