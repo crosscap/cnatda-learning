@@ -36,3 +36,5 @@ print(f"max RTT: {RTT_max} seconds")
 print(f"min RTT: {RTT_min} seconds")
 print(f"average RTT: {RTT_sum / success_cnt} seconds")
 print(f"success rate: {success_cnt * 10}%")
+
+clientSocket.close()

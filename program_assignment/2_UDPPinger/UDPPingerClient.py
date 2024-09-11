@@ -24,3 +24,4 @@ for i in range(0, 10):
     end_time = time.time()
     print(message.decode())
     print(f"spent {end_time - start_time} seconds")
+clientSocket.close()
