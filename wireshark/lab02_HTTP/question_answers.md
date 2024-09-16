@@ -74,21 +74,21 @@ If-Modified-Since: Wed, 03 Feb 2021 06:59:02 GMT\r\n
 
 ![long_text_info](images/long_text_info.png)
 
-## q12
+### q12
 
 发送了 1 个 GET 请求
 
 第 26 号数据包
 
-## q13
+### q13
 
 第 32 号数据包
 
-## q14
+### q14
 
 200 OK
 
-## q15
+### q15
 
 总共 4 个 TCP 段, 这里是 28, 29, 31, 32
 
@@ -96,13 +96,13 @@ If-Modified-Since: Wed, 03 Feb 2021 06:59:02 GMT\r\n
 
 ![insert_info](images/insert_info.png)
 
-## q16
+### q16
 
 4 个
 
 两个 128.119.245.12, 一个 178.19.137.164, 一个  178.79.137.164 (重定向)
 
-## q17
+### q17
 
 连续下载, 在第一个图片的回复到达后第二个图片的请求才被发送
 
@@ -110,11 +110,11 @@ If-Modified-Since: Wed, 03 Feb 2021 06:59:02 GMT\r\n
 
 ![auth_info](images/auth_info.png)
 
-## q18
+### q18
 
 401 Unauthorized
 
-## q19
+### q19
 
 Cache-Control: max-age=0\r\n
 Authorization: Basic d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=\r\n
